@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>URL Shortener</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Poppins', sans-serif">
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Shrink your URL!</h1>
+        <form class="" action="/shortUrls" method="POST">
+          <label for="defaultUrl" class="label">Name</label>
+          <div class="field is-horizontal is-grouped">
+            <div class="control has-icons-left">
+              <input
+                required
+                class="input"
+                type="url"
+                name="defaultUrl"
+                id="defaultUrl"
+                placeholder="Insert URL"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-link"></i>
+              </span>
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-primary ml-1">
+                Shrink
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <table class="table is-striped is-hoverable mt-6">
+          <thead>
+            <tr>
+              <th>Full URL</th>
+              <th>Short URL</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://bulma.io/documentation/"
+                  >https://bulma.io/documentation/</a
+                >
+              </td>
+              <td>
+                <a href="asjhke">asjhke</a>
+              </td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
