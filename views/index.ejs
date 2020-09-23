@@ -22,15 +22,15 @@
       <div class="container">
         <h1 class="title">Shrink your URL!</h1>
         <form class="" action="/shortUrls" method="POST">
-          <label for="defaultUrl" class="label">Name</label>
+          <label for="fullUrl" class="label">Name</label>
           <div class="field is-horizontal is-grouped">
             <div class="control has-icons-left">
               <input
                 required
                 class="input"
                 type="url"
-                name="defaultUrl"
-                id="defaultUrl"
+                name="fullUrl"
+                id="fullUrl"
                 placeholder="Insert URL"
               />
               <span class="icon is-small is-left">
@@ -54,17 +54,13 @@
             </tr>
           </thead>
           <tbody>
+            <% shortUrls.forEach(shortUrl => { %>
             <tr>
-              <td>
-                <a href="https://bulma.io/documentation/"
-                  >https://bulma.io/documentation/</a
-                >
-              </td>
-              <td>
-                <a href="asjhke">asjhke</a>
-              </td>
-              <td>10</td>
+              <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+              <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+              <td><%= shortUrl.clicks %></td>
             </tr>
+            <% }) %>
           </tbody>
         </table>
       </div>
